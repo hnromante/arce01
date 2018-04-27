@@ -50,15 +50,81 @@
                     
     </header>
     <main>
-      INGRESO DE PACIENTES
+      <!-- FORMULARIO DE INGRESO PACIENTES-->
+      <div class="row" style="margin:30px; padding:30px;">
+          <div class="col s12 flow-text blue-text text-darken-2 center-align" style="margin-bottom:10px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" ><h1>Ingreso de Pacientes </h1> </div>
+
+          <div class="col s12 center-align z-depth-1" >
+              <form action="" style="margin:30px;">
+
+              <div class="input-field col s12">
+                  <input type="text" id="rut" name="rut" class="validate" maxlength="12" minlength="11" placeholder="Con puntos y guion">
+                  <label for="rut">RUT</label>
+              </div>
+
+              <div class="input-field col s12 ">
+                  <input type="text" id="nombre" name="nombre" class="validate">
+                  <label for="nombre">Nombre</label>
+              </div>
+
+              <div class="input-field col s12">
+                  <input type="text" id="nacionalidad" name="nacionalidad" class="validate" maxlength="50">
+                  <label for="nacionalidad">Nacionalidad</label>
+              </div>
+
+              <div class="input-field col s12 ">
+                  <input type="text" id="ocupacion" name="ocupacion" class="validate">
+                  <label for="ocupacion">Ocupación</label>
+              </div>
+              
+              <div class="input-field col s12">
+                  <input type="text" id="domicilio" name="domicilio" class="validate" maxlength="50">
+                  <label for="domicilio">Domicilio</label>
+              </div>
+
+              <div class="input-field col s12 ">
+                  <input type="number" id="telefono" name="telefono" class="validate" maxlength="9" max="999999999" placeholder="Max 9 numeros">
+                  <label for="telefono">Teléfono</label>
+              </div>
+
+              <div class="input-field col s12">
+                <div class="col s6">
+                    <p>
+                        <label>
+                          <input name="genero" class="with-gap" type="radio" checked />
+                          <span>Masculino</span>
+                        </label>
+                      </p>
+                </div>
+                <div class="col s6">
+                    <p>
+                        <label>
+                          <input name="genero" class="with-gap"  type="radio" />
+                          <span>Femenino</span>
+                        </label>
+                      </p>
+                </div>             
+                  <label>Sexo: </label>
+              </div>
+
+              <div class="input-field col s12 ">
+                  <input type="text" id="nacimiento" name="nacimiento" class="datepicker">
+                  <label for="nacimiento">Fecha de Nacimiento</label>
+              </div>
+
+              <input type="submit" value="Ingresar" class="btn small">
+              </form>
+          </div>
+
+      </div>
     </main>
 
-
+    <!-- FOOTER-->
     <footer class="page-footer blue darken-3">
         <div class="container">
             <div class="row">
             <div class="col l12 s12">
-                <h5 class="white-text">Aplicación clínica - Desarrollo de aplicaciones avanzadas - Profesor Cesar Arce</h5>
+                <h5 class="white-text">Aplicación clínica - Desarrollo de aplicaciones avanzadas - Profesor Cesar Arce - Inacap Rancagua</h5>
                 <p class="grey-text text-lighten-4">Hugo Nuñez Romante - Analista Programador - 27 de Abril de 2018</p>
             </div>
            
@@ -77,9 +143,33 @@
       <script src="js/materialize.min.js"></script>
     <script>
       $("document").ready(function(){
-          
         $(".sidenav").sidenav();
         $('select').formSelect();
+        var defaultDate = new Date(1995, 01, 23);
+        var minDate = new Date(1910, 01, 01);
+        var maxDate = new Date(2018, 12, 30);
+  	    $('.datepicker').datepicker({
+            i18n: {
+                months: [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ],
+                monthsShort: [ 'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic' ],
+                weekdays: [ 'Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado' ],
+                weekdaysShort: [ 'Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb' ],
+                weekdaysAbbrev: [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
+            },
+            done: 'Aceptar',
+            clear: 'Limpiar',
+            cancel: 'Cancelar',
+            firstDay: 1,
+            format: 'dd/mm/yyyy',
+            formatSubmit: 'dd/mm/yyyy',
+            closeOnSelect: true,
+            closeOnClear: true,
+            minDate: minDate,
+            maxDate: maxDate,
+            defaultDate: defaultDate,
+         
+        });
+        
       });
     </script>
   </body>
