@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Clinica HNR</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+      <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }  
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header >
+            <nav class="blue darken-3" >
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="inicio.html" class="brand-logo">Clinica HNR</a>
+                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="inicio.html">Inicio</a></li>
+                            <li><a href="paciente_ingreso.html">Ingresar Paciente</a></li>
+                            <li class="active"><a href="paciente_lista.html">Listado de Pacientes</a></li>
+                            <li><a href="reserva_ingreso.html">Generar Reserva</a></li>
+                            <li><a href="reserva_lista.html">Listado de Reservas</a></li>
+                            <li><a href="autor.html">Autor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="paciente_ingreso.html">Ingresar Paciente</a></li>
+                <li class="active"><a href="paciente_lista.html">Listado de Pacientes</a></li>
+                <li><a href="reserva_ingreso.html">Generar Reserva</a></li>
+                <li><a href="reserva_lista.html">Listado de Reservas</a></li>
+                <li><a href="autor.html">Autor</a></li>
+            </ul>
+                    
+    </header>
+    <main>
+      LISTADO DE PACIENTES
+    </main>
+
+
+    <footer class="page-footer blue darken-3">
+        <div class="container">
+            <div class="row">
+            <div class="col l12 s12">
+                <h5 class="white-text">Aplicación clínica - Desarrollo de aplicaciones avanzadas - Profesor Cesar Arce</h5>
+                <p class="grey-text text-lighten-4">Hugo Nuñez Romante - Analista Programador - 27 de Abril de 2018</p>
+            </div>
+           
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+            © 2018 Arce Boyzzz
+            <a class="grey-text text-lighten-4 right" href="http://hnromante.info" target="_blank">HNR</a>
+            </div>
+        </div>
+    </footer>
+    <!-- JQUERY -->
+      <script src="js/jquery.min.js"></script>
+    <!-- MATERIALIZE -->
+      <script src="js/materialize.min.js"></script>
+    <script>
+      $("document").ready(function(){
+          
+        $(".sidenav").sidenav();
+        $('select').formSelect();
+      });
+    </script>
+  </body>
+</html>
