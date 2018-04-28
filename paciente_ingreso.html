@@ -32,7 +32,7 @@
                             <li class="active"><a href="paciente_ingreso.html">Ingresar Paciente</a></li>
                             <li><a href="paciente_lista.html">Listado de Pacientes</a></li>
                             <li><a href="reserva_ingreso.html">Generar Reserva</a></li>
-                            <li><a href="reserva_lista.html">Listado de Reservas</a></li>
+                            <li><a href="buscador.html">Buscador</a></li>
                             <li><a href="autor.html">Autor</a></li>
                         </ul>
                     </div>
@@ -44,7 +44,7 @@
                 <li class="active"><a href="paciente_ingreso.html">Ingresar Paciente</a></li>
                 <li><a href="paciente_lista.html">Listado de Pacientes</a></li>
                 <li><a href="reserva_ingreso.html">Generar Reserva</a></li>
-                <li><a href="reserva_lista.html">Listado de Reservas</a></li>
+                <li><a href="buscador.html">Buscador</a></li>
                 <li><a href="autor.html">Autor</a></li>
             </ul>
                     
@@ -106,7 +106,29 @@
                 </div>             
                   <label>Sexo: </label>
               </div>
-
+              <!-- CHECKBOXES -->
+              <div class="input-field col s12">
+               
+               <p>
+                <!-- ALERGIA A MEDICAMENTOS -->
+                    <label>
+                      <input type="checkbox" name="alergias" id="alergias"/>
+                      <span>¿Alergia a medicamentos?</span>
+                    </label>
+                <!-- PROBLEMAS CARDIACOS -->
+                    <label>
+                        <input type="checkbox" name="cardiacos" id="cardiacos"/>
+                        <span>¿Problemas cardiacos?</span>
+                    </label>
+                <!-- DIABETES -->
+                    <label>
+                        <input type="checkbox" name="diabetes" id="diabetes"/>
+                        <span>Diabetes</span>
+                    </label>
+                </p>
+                <label>Parametros médicos: </label>
+               
+              </div>
               <div class="input-field col s12 ">
                   <input type="text" id="nacimiento" name="nacimiento" class="datepicker">
                   <label for="nacimiento">Fecha de Nacimiento</label>

@@ -32,7 +32,7 @@
                             <li><a href="paciente_ingreso.html">Ingresar Paciente</a></li>
                             <li><a href="paciente_lista.html">Listado de Pacientes</a></li>
                             <li><a href="reserva_ingreso.html">Generar Reserva</a></li>
-                            <li class="active"><a href="reserva_lista.html">Listado de Reservas</a></li>
+                            <li class="active"><a href="buscador.html">Buscador</a></li>
                             <li><a href="autor.html">Autor</a></li>
                         </ul>
                     </div>
@@ -44,7 +44,7 @@
                 <li><a href="paciente_ingreso.html">Ingresar Paciente</a></li>
                 <li><a href="paciente_lista.html">Listado de Pacientes</a></li>
                 <li><a href="reserva_ingreso.html">Generar Reserva</a></li>
-                <li class="active"><a href="reserva_lista.html">Listado de Reservas</a></li>
+                <li class="active"><a href="buscador.html">Buscador</a></li>
                 <li><a href="autor.html">Autor</a></li>
             </ul>
                     
@@ -53,7 +53,17 @@
       <div class="container">
         <!-- LSITADO DE RESERVAS-->
         <div style="margin:15px; padding:15px;">
-            <div class="col s12 flow-text blue-text text-darken-2 center-align" style="margin-bottom:10px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" ><h1>Listado de Reservas </h1> </div>
+            <div class="col s12 flow-text blue-text text-darken-2 center-align" style="margin-bottom:10px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" ><h1>Buscador </h1> </div>
+            <div class="col s12">
+              <form action="">
+                  <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon" for="search">RUT, NOMBRE, ESPECIALISTA</label>
+                    <i class="material-icons">close</i>
+                  </div>
+                </form>
+            </div>
+      
             <div class="col s12 m8 l8 z-depth-1 center-align">
                 <table class="responsive-table stripped">
                   <thead>

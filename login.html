@@ -30,16 +30,16 @@
             <div class="col s12 flow-text grey-text text-darken-1 center-align" style="margin-bottom:10px;" >Ingreso de usuarios</div>
 
             <div class="col s12 center-align z-depth-1" >
-                <form action="" style="margin-bottom:30px;">
+                <form action="" style="margin-bottom:30px;" id="formIngresar">
                 <div class="input-field col s12">
-                    <input type="text" id="first_name" class="validate">
-                    <label for="first_name">Usuario</label>
+                    <input type="text" id="usu" class="validate">
+                    <label for="usu">Usuario</label>
                 </div>
                 <div class="input-field col s12 ">
-                    <input type="password" id="last_name" class="validate">
-                    <label for="last_name">Contraseña</label>
+                    <input type="password" id="pass" class="validate">
+                    <label for="pass">Contraseña</label>
                 </div>
-                <input type="submit" value="Entrar" class="btn small">
+                <input type="submit" value="Entrar" id="botonIngresar" class="btn small">
                 </form>
             </div>
             <div class="col s12 left-align grey-text">
@@ -79,6 +79,18 @@
           
         $(".sidenav").sidenav();
         $('select').formSelect();
+        $('#formIngresar').submit(function(){
+          var usu = $("#usu").val();
+          var pass = $("#pass").val();
+
+          if (usu != "jperez" || pass != "123456"){
+            alert("Datos de inicio incorrectos");
+          }else{
+            var url = "/inicio.html"
+            alert("Bienvenido JPerez, visita inicio.html");
+            window.location.href = url; 
+          }
+        })
       });
     </script>
   </body>
